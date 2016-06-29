@@ -61,10 +61,11 @@
 	//	2. depth format of 0 bit. Use 16 or 24 bit for 3d effects, like CCPageTurnTransition
 	//
 	//
-	EAGLView *glView = [EAGLView viewWithFrame:[window bounds]
-								   pixelFormat:kEAGLColorFormatRGB565	// kEAGLColorFormatRGBA8
-								   depthFormat:0						// GL_DEPTH_COMPONENT16_OES
-						];
+//	EAGLView *glView = [EAGLView viewWithFrame:[window bounds]
+//								   pixelFormat:kEAGLColorFormatRGB565	// kEAGLColorFormatRGBA8
+//								   depthFormat:0						// GL_DEPTH_COMPONENT16_OES
+//						];
+    EAGLView *glView = [EAGLView viewWithFrame:[window bounds] pixelFormat:kEAGLColorFormatSRGBA8 depthFormat:0];
 	
 	// attach the openglView to the director
 	[director setOpenGLView:glView];
@@ -100,8 +101,44 @@
     
 	// make the View Controller a child of the main window, needed for iOS 4 and 5
 	[window addSubview: viewController.view];
-	
-	[window makeKeyAndVisible];
+    //set the background color
+    [CCDirector sharedDirector].openGLView.backgroundColor = [UIColor clearColor];
+    [CCDirector sharedDirector].openGLView.opaque = NO;
+    //set value for glClearColor
+    glClearColor(0.0, 0.0, 0.0, 0.0);
+    //prepare the overlay view and add it to window.
+    overlay = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    overlay.opaque = NO;
+    overlay.backgroundColor=[UIColor clearColor];
+    [window addSubview:overlay];
+#define CAMERA_TRANSFORM  1.24299
+    
+    UIImagePickerController *uip;
+    
+    @try {
+        uip = [[[UIImagePickerController alloc] init] autorelease];
+        uip.sourceType = UIImagePickerControllerSourceTypeCamera;
+        uip.showsCameraControls = NO;
+        uip.toolbarHidden = YES;
+        uip.navigationBarHidden = YES;
+        uip.wantsFullScreenLayout = YES;
+        uip.cameraViewTransform = CGAffineTransformScale(uip.cameraViewTransform,
+                                                         CAMERA_TRANSFORM, CAMERA_TRANSFORM);
+    }
+    @catch (NSException * e) {
+        [uip release];
+        uip = nil;
+    }
+    @finally {
+        if(uip) {
+            [overlay addSubview:[uip view]];
+            [overlay release];
+        }
+    }
+    
+    [window bringSubviewToFront:viewController.view];
+    
+    [window makeKeyAndVisible];
 	
 	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
 	// It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
