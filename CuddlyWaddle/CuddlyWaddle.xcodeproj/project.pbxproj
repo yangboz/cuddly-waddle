@@ -27,6 +27,10 @@
 		A418FE6B1D23C786008D34E9 /* SpaceGame.caf in Resources */ = {isa = PBXBuildFile; fileRef = A418FE561D23C785008D34E9 /* SpaceGame.caf */; };
 		A418FE6C1D23C786008D34E9 /* Sprites.plist in Resources */ = {isa = PBXBuildFile; fileRef = A418FE581D23C785008D34E9 /* Sprites.plist */; };
 		A418FE6D1D23C786008D34E9 /* Sprites.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = A418FE591D23C785008D34E9 /* Sprites.pvr.ccz */; };
+		A42968AB1D2BCC7F0008A76B /* MarkerFelt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A42968AA1D2BCC7F0008A76B /* MarkerFelt.ttf */; };
+		A42968AE1D2BD6AD0008A76B /* EnemyShip.m in Sources */ = {isa = PBXBuildFile; fileRef = A42968AD1D2BD6AD0008A76B /* EnemyShip.m */; };
+		A42968B01D2BD70B0008A76B /* scope.png in Resources */ = {isa = PBXBuildFile; fileRef = A42968AF1D2BD70B0008A76B /* scope.png */; };
+		A42968B21D2BD7870008A76B /* Explosion.plist in Resources */ = {isa = PBXBuildFile; fileRef = A42968B11D2BD7870008A76B /* Explosion.plist */; };
 		A464E7B71D2B9C0F00D5FE16 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A464E7B61D2B9C0F00D5FE16 /* CoreMotion.framework */; };
 		A4ADA8D41D22071900473253 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4ADA8D31D22071900473253 /* QuartzCore.framework */; };
 		A4ADA8D61D22071900473253 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4ADA8D51D22071900473253 /* OpenGLES.framework */; };
@@ -164,6 +168,11 @@
 		A418FE561D23C785008D34E9 /* SpaceGame.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SpaceGame.caf; sourceTree = "<group>"; };
 		A418FE581D23C785008D34E9 /* Sprites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sprites.plist; sourceTree = "<group>"; };
 		A418FE591D23C785008D34E9 /* Sprites.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sprites.pvr.ccz; sourceTree = "<group>"; };
+		A42968AA1D2BCC7F0008A76B /* MarkerFelt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MarkerFelt.ttf; sourceTree = "<group>"; };
+		A42968AC1D2BD6AD0008A76B /* EnemyShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnemyShip.h; path = ../../../../Downloads/ARSpaceships/ARSpaceships/EnemyShip.h; sourceTree = "<group>"; };
+		A42968AD1D2BD6AD0008A76B /* EnemyShip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnemyShip.m; path = ../../../../Downloads/ARSpaceships/ARSpaceships/EnemyShip.m; sourceTree = "<group>"; };
+		A42968AF1D2BD70B0008A76B /* scope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scope.png; path = ../../../../Downloads/ARSpaceships/ARSpaceships/scope.png; sourceTree = "<group>"; };
+		A42968B11D2BD7870008A76B /* Explosion.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Explosion.plist; path = ../../../../Downloads/ARSpaceships/ARSpaceships/Explosion.plist; sourceTree = "<group>"; };
 		A464E7B61D2B9C0F00D5FE16 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		A4ADA8D01D22071800473253 /* CuddlyWaddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuddlyWaddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4ADA8D31D22071900473253 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -438,6 +447,7 @@
 		A418FE481D23C785008D34E9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				A42968AA1D2BCC7F0008A76B /* MarkerFelt.ttf */,
 				A418FE491D23C785008D34E9 /* Arial.fnt */,
 				A418FE4A1D23C785008D34E9 /* Arial.png */,
 			);
@@ -517,6 +527,8 @@
 		A4ADA8E31D22071900473253 /* CuddlyWaddle */ = {
 			isa = PBXGroup;
 			children = (
+				A42968AC1D2BD6AD0008A76B /* EnemyShip.h */,
+				A42968AD1D2BD6AD0008A76B /* EnemyShip.m */,
 				A4ADAA241D22071E00473253 /* AppDelegate.h */,
 				A4ADAA251D22071E00473253 /* AppDelegate.m */,
 				A4ADAA271D22071E00473253 /* RootViewController.h */,
@@ -534,6 +546,8 @@
 		A4ADA8E41D22071900473253 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A42968B11D2BD7870008A76B /* Explosion.plist */,
+				A42968AF1D2BD70B0008A76B /* scope.png */,
 				A418FE3F1D23C785008D34E9 /* Backgrounds */,
 				A418FE451D23C785008D34E9 /* Classes */,
 				A418FE481D23C785008D34E9 /* Fonts */,
@@ -901,10 +915,13 @@
 				A418FE611D23C786008D34E9 /* Arial.png in Resources */,
 				A418FE5D1D23C786008D34E9 /* bg_spacialanomaly.png in Resources */,
 				A418FE6B1D23C786008D34E9 /* SpaceGame.caf in Resources */,
+				A42968B01D2BD70B0008A76B /* scope.png in Resources */,
 				A418FE6A1D23C786008D34E9 /* shake.caf in Resources */,
 				A418FE641D23C786008D34E9 /* Stars3.plist in Resources */,
 				A4ADA8EA1D22071900473253 /* Default-568h@2x.png in Resources */,
 				A418FE5C1D23C786008D34E9 /* bg_planetsunrise.png in Resources */,
+				A42968AB1D2BCC7F0008A76B /* MarkerFelt.ttf in Resources */,
+				A42968B21D2BD7870008A76B /* Explosion.plist in Resources */,
 				A418FE5A1D23C786008D34E9 /* bg_front_spacedust.png in Resources */,
 				A4ADA8EC1D22071900473253 /* fps_images.png in Resources */,
 				A4ADA8F81D22071900473253 /* Icon@2x.png in Resources */,
@@ -955,6 +972,7 @@
 				A4ADA9561D22071C00473253 /* CCMenuItem.m in Sources */,
 				A4ADA9B11D22071D00473253 /* CCTransitionPageTurn.m in Sources */,
 				A4ADA9ED1D22071D00473253 /* ccUtils.c in Sources */,
+				A42968AE1D2BD6AD0008A76B /* EnemyShip.m in Sources */,
 				A4ADA98A1D22071C00473253 /* CCSpriteBatchNode.m in Sources */,
 				A4ADAA061D22071E00473253 /* CDOpenALSupport.m in Sources */,
 				A4ADA9F81D22071D00473253 /* TransformUtils.m in Sources */,

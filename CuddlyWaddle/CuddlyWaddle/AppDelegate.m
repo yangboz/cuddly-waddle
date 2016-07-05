@@ -105,7 +105,7 @@
     [CCDirector sharedDirector].openGLView.backgroundColor = [UIColor clearColor];
     [CCDirector sharedDirector].openGLView.opaque = NO;
     //set value for glClearColor
-    glClearColor(0.0, 0.0, 0.0, 0.0);
+    glClearColor(0.0, 0.0, 0.0, 0.5);
     //prepare the overlay view and add it to window.
     overlay = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     overlay.opaque = NO;
