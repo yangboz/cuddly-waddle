@@ -116,7 +116,7 @@
     UIImagePickerController *uip;
     
     @try {
-        uip = [[[UIImagePickerController alloc] init] autorelease];
+        uip = [[UIImagePickerController alloc] init] ;
         uip.sourceType = UIImagePickerControllerSourceTypeCamera;
         uip.showsCameraControls = NO;
         uip.toolbarHidden = YES;

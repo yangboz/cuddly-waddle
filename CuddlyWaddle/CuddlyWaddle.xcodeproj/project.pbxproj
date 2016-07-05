@@ -27,6 +27,7 @@
 		A418FE6B1D23C786008D34E9 /* SpaceGame.caf in Resources */ = {isa = PBXBuildFile; fileRef = A418FE561D23C785008D34E9 /* SpaceGame.caf */; };
 		A418FE6C1D23C786008D34E9 /* Sprites.plist in Resources */ = {isa = PBXBuildFile; fileRef = A418FE581D23C785008D34E9 /* Sprites.plist */; };
 		A418FE6D1D23C786008D34E9 /* Sprites.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = A418FE591D23C785008D34E9 /* Sprites.pvr.ccz */; };
+		A464E7B71D2B9C0F00D5FE16 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A464E7B61D2B9C0F00D5FE16 /* CoreMotion.framework */; };
 		A4ADA8D41D22071900473253 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4ADA8D31D22071900473253 /* QuartzCore.framework */; };
 		A4ADA8D61D22071900473253 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4ADA8D51D22071900473253 /* OpenGLES.framework */; };
 		A4ADA8D81D22071900473253 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4ADA8D71D22071900473253 /* OpenAL.framework */; };
@@ -163,6 +164,7 @@
 		A418FE561D23C785008D34E9 /* SpaceGame.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SpaceGame.caf; sourceTree = "<group>"; };
 		A418FE581D23C785008D34E9 /* Sprites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sprites.plist; sourceTree = "<group>"; };
 		A418FE591D23C785008D34E9 /* Sprites.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sprites.pvr.ccz; sourceTree = "<group>"; };
+		A464E7B61D2B9C0F00D5FE16 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		A4ADA8D01D22071800473253 /* CuddlyWaddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuddlyWaddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4ADA8D31D22071900473253 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A4ADA8D51D22071900473253 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -395,6 +397,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A464E7B71D2B9C0F00D5FE16 /* CoreMotion.framework in Frameworks */,
 				A4ADA8D81D22071900473253 /* OpenAL.framework in Frameworks */,
 				A4ADA8DE1D22071900473253 /* UIKit.framework in Frameworks */,
 				A4ADA8D41D22071900473253 /* QuartzCore.framework in Frameworks */,
@@ -498,6 +501,7 @@
 		A4ADA8D21D22071800473253 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A464E7B61D2B9C0F00D5FE16 /* CoreMotion.framework */,
 				A4ADA8D31D22071900473253 /* QuartzCore.framework */,
 				A4ADA8D51D22071900473253 /* OpenGLES.framework */,
 				A4ADA8D71D22071900473253 /* OpenAL.framework */,
