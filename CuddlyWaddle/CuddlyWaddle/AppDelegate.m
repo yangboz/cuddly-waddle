@@ -65,8 +65,8 @@
 //								   pixelFormat:kEAGLColorFormatRGB565	// kEAGLColorFormatRGBA8
 //								   depthFormat:0						// GL_DEPTH_COMPONENT16_OES
 //						];
-    EAGLView *glView = [EAGLView viewWithFrame:[window bounds] pixelFormat:kEAGLColorFormatSRGBA8 depthFormat:0];
-	
+    EAGLView *glView = [EAGLView viewWithFrame:[window bounds] pixelFormat:kEAGLColorFormatRGBA8 depthFormat:0];
+
 	// attach the openglView to the director
 	[director setOpenGLView:glView];
 	
@@ -94,6 +94,7 @@
 	
 	
 	// make the OpenGLView a child of the view controller
+//    [viewController.view insertSubview:glView atIndex:0];
 	[viewController setView:glView];
 	
     //Required in iOS6, recommended in 4 and 5
@@ -124,6 +125,7 @@
         uip.wantsFullScreenLayout = YES;
         uip.cameraViewTransform = CGAffineTransformScale(uip.cameraViewTransform,
                                                          CAMERA_TRANSFORM, CAMERA_TRANSFORM);
+        uip.cameraOverlayView.opaque=NO;
     }
     @catch (NSException * e) {
         [uip release];
@@ -131,6 +133,7 @@
     }
     @finally {
         if(uip) {
+//            [overlay insertSubview:[uip view] atIndex:4];
             [overlay addSubview:[uip view]];
             [overlay release];
         }
@@ -143,6 +146,7 @@
 	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
 	// It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
 	// You can change anytime.
+    
 	[CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
 
 	
